@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> الرئسية ارمكس </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="css.css">
+    <meta content="ar_AR" property="og:locale" />
+    <meta content="https://Armex.com/" property="og:url" />
+    <meta content="ارمكس توصيل/استلام " property="og:title" />
+    <meta content="ارمكس توصيل/استلام " property="og:site_name" />
+    <meta content="" property="og:description" />
+    <meta content="ارمكس توصيل/استلام " property="og:image:alt" />
+    <meta content="website" property="og:type" />
+    <meta  property="og:image" content="https://www8.0zz0.com/2023/01/11/00/979085965.jpg"/>
+    <meta  property="og:image:width" content="300"/>
+    <meta  property="og:image:height" content="600"/>
+    <meta content="ارمكس توصيل/استلام ," name="keywords" />
+    <meta content="ارمكس توصيل/استلام " property="article:tag" />
+    <meta content="" name="apple-mobile-web-app-capable" />
+    <meta content="" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="description" content="
+    قطاعات الصناعة. ارمكس شريك فخر للشركات من جميع القطاعات في المملكة. أكثر من خمس وعشرون عاماً في خدمة عملائها من مختلف القطاعات أعطاها تعليمًا جيدًا في التحديات">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <button>   </button>
+            <h2> ارامكس </h2>  
+        </nav>
+    </div>
+
+    <div class="img">
+        <img src="2.jpeg" >
+        <div class="content">
+            <h1>  تتبع شحناتك </h1>
+            <div class="button">
+                <button > بضائع </button>
+                <button id="b2"> شحنات </button>
+            </div>
+
+            <form class="f">
+                <div class="form" onload="getNem()">
+                    <button  type="submit">تتبع </button>
+                    <input type="number" required placeholder="ادخل رقم التتبع الخاص" class="input">
+                    <button  id="pn"><img src="10.png" ></button>
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+
+    <div class="crot"> 
+
+       <img src="3.png" alt="">
+       <img src="4.png" alt="">
+       <img src="5.png" alt="">
+       <img src="6.png" alt="">
+       <img src="7.png" alt="">
+       <img src="88.png" alt="">
+       <div class="exit">
+        <img src="9.png" alt="">
+      </div>
+    </div>
+    
+  <script>
+       var form = document.querySelector(".f");
+       var input = document.querySelector(".input");
+       form.addEventListener("submit" ,function(event){
+        event.preventDefault();
+        window.scrollTo(0,0);
+
+        if(input.value==""){
+
+            alert(" رقم التتبع مطلوب ")
+
+        }
+        else{
+            var name = document.querySelector(".input").value;
+            localStorage.setItem("data", name )
+            setTimeout(function() {
+            var name = document.querySelector(".input").value;
+            window.location.href = "index1.html"
+            },1000);
+ 
+       }
+    
+        
+       
+       });
+  </script>
+</body>
+</html>

